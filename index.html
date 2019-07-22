@@ -4,6 +4,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
 	<link rel="bookmark" type="image/x-icon" href="/img/logo_miccall.png">
 	<link rel="shortcut icon" href="/img/logo_miccall.png">
+	<link rel="stylesheet" media="screen" href="../source/css/style.css">
 	
 			    <title>
     sheeran
@@ -171,7 +172,31 @@
 
         
         <!-- 文章列表   s -->
-        <div id="main" style="background-color: transparent; padding:0;">
+        <div id="main" style="background-color: transparent; padding:0; position:relative">
+        <div id="particles-js" style="width:100;heigth:100%;position:absolute;opcity:0.6"></div>
+        <script src="../../particles.js"></script>
+	   <script src="../source/js/app.js"></script>
+
+	   <script src="../source/js/lib/stats.js"></script>
+	   <script>
+		  var count_particles, stats, update;
+		  stats = new Stats;
+		  stats.setMode(0);
+		  stats.domElement.style.position = 'absolute';
+		  stats.domElement.style.left = '0px';
+		  stats.domElement.style.top = '0px';
+		  document.body.appendChild(stats.domElement);
+		  count_particles = document.querySelector('.js-count-particles');
+		  update = function() {
+		    stats.begin();
+		    stats.end();
+		    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+		      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+		    }
+		    requestAnimationFrame(update);
+		  };
+		  requestAnimationFrame(update);
+		</script>
         <section class="link_container" style="margin-top: 0; background-color: transparent; ">
             <div class="link_row">
                 <!-- 文章sample  s-->
