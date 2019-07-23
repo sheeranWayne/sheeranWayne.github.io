@@ -250,7 +250,7 @@
 <li><p>DML</p>
 <ul>
 <li><p>插入数据 insert</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into tb_student values (1001, &apos;姓名&apos;, 1, &apos;1000-12-20&apos;, &apos;&apos;);</span><br><span class="line">mysql&gt; insert into tb_student (stuid, stuname, birth)values (1002, &apos;姓名&apos;, &apos;1000-12-20&apos;);	</span><br><span class="line"># values前加与所加数据相对应的列名</span><br><span class="line">mysql&gt; insert into tb_student (stuid, stuname, birth)values </span><br><span class="line">       (1005,&apos;蔡徐坤&apos;, &apos;1000-12-20&apos;),</span><br><span class="line">       (1003, &apos;大撒啊&apos;,&apos;1990-12-30&apos;),</span><br><span class="line">       (1004, &apos;法案是&apos;, &apos;1232-04-24&apos;);</span><br><span class="line">mysql&gt; select * from tb_student;</span><br><span class="line">mysql&gt; select * from tb_student\G</span><br><span class="line"># 查看插入的数据结果</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into tb_student values (1001, &apos;姓名&apos;, 1, &apos;1000-12-20&apos;, &apos;&apos;);</span><br><span class="line">mysql&gt; insert into tb_student (stuid, stuname, birth)values</span><br><span class="line">       (1002, &apos;姓名&apos;, &apos;1000-12-20&apos;);	</span><br><span class="line"># values前加与所加数据相对应的列名</span><br><span class="line">mysql&gt; insert into tb_student (stuid, stuname, birth)values </span><br><span class="line">       (1005,&apos;蔡徐坤&apos;, &apos;1000-12-20&apos;),</span><br><span class="line">       (1003, &apos;大撒啊&apos;,&apos;1990-12-30&apos;),</span><br><span class="line">       (1004, &apos;法案是&apos;, &apos;1232-04-24&apos;);</span><br><span class="line">mysql&gt; select * from tb_student;</span><br><span class="line">mysql&gt; select * from tb_student\G</span><br><span class="line"># 查看插入的数据结果</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>删除数据 delete</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; delete from tb_student where stuid=1002;</span><br><span class="line">mysql&gt; delete from tb_student where stuid in (1003, 1005);</span><br><span class="line"># 删除多个</span><br></pre></td></tr></table></figure>
@@ -325,8 +325,8 @@ $('.btn_click_load').click(function() {
 -->
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/07/20/iddex6/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/07/20/iddex6/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/07/20/index6/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/07/20/index6/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 
